@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Best Store</title>
+<style>
+body{
+	
+	/*background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODWg6lye7J0nFz6_n0tnWRdypI1mNbRhwZw&usqp=CAU");*/
+	
+	/*background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8t1RrE6vH7MSoPVZbARHmNmFdoEHh23cwHw&usqp=CAU");
+	background-repeat: no-repeat;
+    background-size: cover;*/
+    
+          background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWIzHrl_8xQFOGNcu0_9WPj1zct41n_5HmdA&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+	
+}
+
+#one{
+	
+	width:400px;;
+	height:450px;
+	background-color:lightgray;
+	margin-left:35%;
+	margin-top:5%;
+	font-size:25px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:20px;
+}
+
+.user{
+	
+	width:230px;
+	height:35px;
+}
+
+.log{
+	
+	width:100px;
+	height:40px;
+	background-color:green;
+	color:white;
+	margin-left:70px;
+	font-size:20px;
+}
+
+h1{
+	
+	text-align:center;
+	font-family:cursive;
+	color:white;
+	
+}
+
+h2{
+	text-align:center;
+	font-family:cursive;
+	color:white;
+}
+</style>
+</head>
+<body>
+<h1>Product Management Application</h1>
+
+<div id="one">
+
+<form action="main" method="get"> 
+<h2>Login here</h2>
+<label>Username:</label><br>
+<input type="text" name="username" class="user" id="num1" Required/><br><br>
+<label>Password:</label><br>
+<input type="text" name="password" class="user" id="num2" Required/><br><br>
+
+<input type="button" value="login" class="log"  onclick="return login()"/>
+</form>
+</div>
+
+<script>
+
+ function login(){
+	
+	let a=document.getElementById("num1").value;
+	let b=document.getElementById("num2").value;
+	
+	if (a== "manju" && b== "manju123"){
+		
+		//window.location="https://chat.openai.com/";
+		
+		window.location.assign("home");
+		alert ("Login successfully");	
+
+		
+		
+	}
+	
+	else{
+		
+		alert("Login failed");
+		return false;
+	}
+
+	
+	
+
+}
+</script>
+
+</body>
+</html>
